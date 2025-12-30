@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Cairo:wght@400;600;700;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors - automatically generates bg-*, text-*, border-* etc. */
+  --color-pitch-black: #000000;
+  --color-toxic-lime: #DFFF00;
+  --color-crimson-red: #DC143C;
+  --color-cyber-gray: #1a1a1a;
+  --color-neon-blue: #00D4FF;
+
+  /* Fonts - automatically generates font-* */
+  --font-inter: 'Inter', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-cairo: 'Cairo', sans-serif;
+
+  /* Animations can also be defined here if needed */
+}
+
+/* Custom Utilities using @layer utilities (optional but good practice) */
+@layer utilities {
+  .glassmorphism {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glassmorphism {
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(223, 255, 0, 0.1);
+  }
+
+  .light .glassmorphism {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px rgba(223, 255, 0, 0.8),
+      0 0 20px rgba(223, 255, 0, 0.6),
+      0 0 30px rgba(223, 255, 0, 0.4);
+  }
+
+  .shadow-neon-lime {
+    box-shadow: 0 0 20px rgba(223, 255, 0, 0.5);
+  }
+
+  .neon-border {
+    box-shadow: 0 0 10px rgba(223, 255, 0, 0.5),
+      inset 0 0 10px rgba(223, 255, 0, 0.2);
+  }
+
+  .shadow-neon-blue {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+
+  .shadow-neon-red {
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+  }
+}
+
+/* Base Styles */
+/* Note: Tailwind v4 resets are included in @import "tailwindcss" */
+
+/* App-specific CSS Variables */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --accent: #DFFF00;
+}
+
+.dark {
+  --bg-primary: #000000;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent: #DFFF00;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: var(--font-inter);
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-cairo);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-oswald);
+  font-weight: 700;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: var(--font-cairo);
+  font-weight: 900;
+}
+
+/* Gradients */
+.bg-cyber-gradient {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.bg-neon-gradient {
+  background: linear-gradient(135deg, #DFFF00 0%, #00D4FF 100%);
+}
