@@ -42,8 +42,9 @@ const Footer = () => {
                             {[
                                 { path: '/', label: nav.home },
                                 { path: '/workouts', label: nav.workouts },
-                                { path: '/trainers', label: nav.trainers },
+                                { path: '/about', label: nav.about },
                                 { path: '/pricing', label: nav.pricing },
+                                { path: '/policy', label: nav.returnPolicy },
                             ].map((item) => (
                                 <li key={item.path}>
                                     <Link

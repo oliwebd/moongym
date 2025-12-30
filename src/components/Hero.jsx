@@ -13,7 +13,11 @@ const Hero = () => {
             <div className="absolute inset-0 z-0">
                 <img
                     src="/images/hero_bg_gym_1767079903074.png"
-                    alt="Gym Background"
+                    alt="MoonGYM - صالة رياضية متطورة - Elite Fitness Center Interior"
+                    loading="eager"
+                    decoding="async"
+                    width="1920"
+                    height="1080"
                     className="w-full h-full object-cover opacity-40 mix-blend-overlay"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-pitch-black via-transparent to-pitch-black"></div>

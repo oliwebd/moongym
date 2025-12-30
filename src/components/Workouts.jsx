@@ -13,24 +13,36 @@ const Workouts = () => {
             title: t.strength.name,
             description: t.strength.description,
             color: 'toxic-lime',
+            duration: t.strength.duration,
+            intensity: t.strength.intensity,
+            benefits: t.strength.benefits,
         },
         {
             icon: Flame,
             title: t.cardio.name,
             description: t.cardio.description,
-            color: 'crimson-red',
+            color: 'toxic-lime',
+            duration: t.cardio.duration,
+            intensity: t.cardio.intensity,
+            benefits: t.cardio.benefits,
         },
         {
             icon: Heart,
             title: t.flexibility.name,
             description: t.flexibility.description,
-            color: 'neon-blue',
+            color: 'toxic-lime',
+            duration: t.flexibility.duration,
+            intensity: t.flexibility.intensity,
+            benefits: t.flexibility.benefits,
         },
         {
             icon: Zap,
             title: t.hiit.name,
             description: t.hiit.description,
             color: 'toxic-lime',
+            duration: t.hiit.duration,
+            intensity: t.hiit.intensity,
+            benefits: t.hiit.benefits,
         },
     ];
 
@@ -76,9 +88,31 @@ const Workouts = () => {
                                     </h3>
 
                                     {/* Description */}
-                                    <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
+                                    <p className="text-[var(--text-secondary)] text-sm leading-relaxed mb-6">
                                         {workout.description}
                                     </p>
+
+                                    {/* Details Tags */}
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        <span className="px-2 py-1 bg-[var(--bg-secondary)] border border-white/10 rounded text-xs text-[var(--text-secondary)]">
+                                            ⏱ {workout.duration}
+                                        </span>
+                                        <span className="px-2 py-1 bg-[var(--bg-secondary)] border border-white/10 rounded text-xs text-[var(--text-secondary)]">
+                                            🔥 {workout.intensity}
+                                        </span>
+                                    </div>
+
+                                    {/* Benefits List */}
+                                    <div className="border-t border-white/10 pt-4">
+                                        <ul className="text-sm text-[var(--text-secondary)] space-y-1">
+                                            {workout.benefits && workout.benefits.map((benefit, i) => (
+                                                <li key={i} className="flex items-center gap-2">
+                                                    <span className="w-1.5 h-1.5 bg-toxic-lime rounded-full"></span>
+                                                    {benefit}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
 
                                     {/* Neon Border Effect on Hover */}
                                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-toxic-lime to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

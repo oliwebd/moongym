@@ -12,28 +12,36 @@ const Trainers = () => {
             specialty: t.alex.specialty,
             bio: t.alex.bio,
             image: '/images/trainer_male_1767079919139.png',
-            isPhoto: true
+            isPhoto: true,
+            certifications: t.alex.certifications,
+            philosophy: t.alex.philosophy,
         },
         {
             name: t.sarah.name,
             specialty: t.sarah.specialty,
             bio: t.sarah.bio,
             image: '/images/trainer_female_1767079933615.png',
-            isPhoto: true
+            isPhoto: true,
+            certifications: t.sarah.certifications,
+            philosophy: t.sarah.philosophy,
         },
         {
             name: t.mike.name,
             specialty: t.mike.specialty,
             bio: t.mike.bio,
             image: '🧘',
-            isPhoto: false
+            isPhoto: false,
+            certifications: t.mike.certifications,
+            philosophy: t.mike.philosophy,
         },
         {
             name: t.emma.name,
             specialty: t.emma.specialty,
             bio: t.emma.bio,
             image: '🥗',
-            isPhoto: false
+            isPhoto: false,
+            certifications: t.emma.certifications,
+            philosophy: t.emma.philosophy,
         },
     ];
 
@@ -72,7 +80,7 @@ const Trainers = () => {
                                     <div className="mb-4 flex justify-center">
                                         <div className={`w-24 h-24 rounded-full ${trainer.isPhoto ? 'overflow-hidden border-2 border-toxic-lime' : 'bg-toxic-lime/10'} flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300`}>
                                             {trainer.isPhoto ? (
-                                                <img src={trainer.image} alt={trainer.name} className="w-full h-full object-cover" />
+                                                <img src={trainer.image} alt={trainer.name} loading="lazy" decoding="async" width="96" height="96" className="w-full h-full object-cover" />
                                             ) : (
                                                 trainer.image
                                             )}
@@ -91,9 +99,26 @@ const Trainers = () => {
                                     </div>
 
                                     {/* Bio */}
-                                    <p className="text-[var(--text-secondary)] text-sm text-center leading-relaxed">
+                                    <p className="text-[var(--text-secondary)] text-sm text-center leading-relaxed mb-6">
                                         {trainer.bio}
                                     </p>
+
+                                    {/* Philosophy */}
+                                    <div className="bg-[var(--bg-primary)] p-4 rounded-lg border border-white/5 mb-4 relative">
+                                        <div className="absolute -top-3 left-4 text-3xl text-toxic-lime opacity-30">"</div>
+                                        <p className="text-white text-xs font-serif italic text-center relative z-10">
+                                            {trainer.philosophy}
+                                        </p>
+                                    </div>
+
+                                    {/* Certs */}
+                                    <div className="flex flex-wrap justify-center gap-2">
+                                        {trainer.certifications && trainer.certifications.map((cert, i) => (
+                                            <span key={i} className="px-2 py-0.5 bg-white/5 rounded border border-white/10 text-[10px] text-[var(--text-secondary)]">
+                                                {cert}
+                                            </span>
+                                        ))}
+                                    </div>
 
                                     {/* Bottom Neon Line */}
                                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-toxic-lime to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

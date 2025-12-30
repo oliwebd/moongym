@@ -6,6 +6,8 @@
   /* Colors - automatically generates bg-*, text-*, border-* etc. */
   --color-pitch-black: #000000;
   --color-toxic-lime: #DFFF00;
+  /* Original Toxic Lime */
+  --color-gold: #DFFF00;
   --color-crimson-red: #DC143C;
   --color-cyber-gray: #1a1a1a;
   --color-neon-blue: #00D4FF;
@@ -56,8 +58,17 @@
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
   }
 
-  .shadow-neon-red {
-    box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+  .shadow-neon-royal {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+
+  /* Text Color Overrides for Readability */
+  .text-toxic-lime {
+    color: var(--text-accent);
+  }
+
+  .text-neon-blue {
+    color: var(--text-blue-accent);
   }
 }
 
@@ -70,7 +81,9 @@
   --bg-secondary: #f5f5f5;
   --text-primary: #000000;
   --text-secondary: #666666;
+  /* Original Toxic Lime - Same in both modes */
   --accent: #DFFF00;
+  --text-accent: #DFFF00;
 }
 
 .dark {
@@ -79,6 +92,9 @@
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
   --accent: #DFFF00;
+  /* Original Toxic Lime */
+  --text-accent: #DFFF00;
+  --text-blue-accent: #00D4FF;
 }
 
 body {

@@ -7,8 +7,11 @@ import Home from './pages/Home';
 import WorkoutsPage from './pages/WorkoutsPage';
 import TrainersPage from './pages/TrainersPage';
 import NewsPage from './pages/NewsPage';
+import SchedulePage from './pages/SchedulePage';
 import PricingPage from './pages/PricingPage';
 import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
+import ReturnPolicyPage from './pages/ReturnPolicyPage';
 import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 
@@ -36,8 +39,11 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/workouts" element={<WorkoutsPage />} />
                   <Route path="/trainers" element={<TrainersPage />} />
+                  <Route path="/schedule" element={<SchedulePage />} />
                   <Route path="/news" element={<NewsPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/policy" element={<ReturnPolicyPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                 </Routes>
               </AnimatePresence>

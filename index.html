@@ -1,13 +1,79 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>moon-gym</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>MoonGYM | صالة رياضية متطورة - Elite Fitness Center</title>
+  <meta name="description"
+    content="MoonGYM - صالة رياضية متطورة تقدم تدريبات القوة واللياقة مع مدربين محترفين. Elite fitness center offering strength training, HIIT, and personal coaching." />
+  <meta name="keywords" content="gym, fitness, صالة رياضية, تمارين, strength training, HIIT, personal trainer" />
+  <meta name="author" content="MoonGYM" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://moongym.com" />
+
+  <!-- Theme Color for Mobile -->
+  <meta name="theme-color" content="#EAB308" />
+  <meta name="msapplication-TileColor" content="#000000" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moongym.com/" />
+  <meta property="og:title" content="MoonGYM | Elite Fitness Center" />
+  <meta property="og:description"
+    content="Transform your body at MoonGYM. Elite fitness center with professional trainers and state-of-the-art equipment." />
+  <meta property="og:image" content="/images/og-image.jpg" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MoonGYM | Elite Fitness Center" />
+  <meta name="twitter:description"
+    content="Transform your body at MoonGYM. Elite fitness center with professional trainers." />
+  <meta name="twitter:image" content="/images/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+
+  <!-- Preconnect to External Resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GymOrFitnessCenter",
+      "name": "MoonGYM",
+      "description": "Elite fitness center offering strength training, HIIT, flexibility classes, and personal coaching.",
+      "url": "https://moongym.com",
+      "telephone": "+966-XXX-XXX-XXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Riyadh",
+        "addressCountry": "SA"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+          "opens": "06:00",
+          "closes": "23:00"
+        }
+      ],
+      "priceRange": "$$",
+      "image": "/images/og-image.jpg"
+    }
+    </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

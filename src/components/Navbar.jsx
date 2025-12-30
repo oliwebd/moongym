@@ -28,7 +28,7 @@ const Navbar = () => {
     }, [location]);
 
     // Pages with dark backgrounds where text should always be white when transparent
-    const isDarkPage = ['/', '/news', '/contact'].includes(location.pathname);
+    const isDarkPage = ['/', '/news', '/contact', '/about'].includes(location.pathname);
 
     // Determine text color class
     const getTextColorClass = () => {
@@ -61,8 +61,10 @@ const Navbar = () => {
                             { path: '/', label: t.home },
                             { path: '/workouts', label: t.workouts },
                             { path: '/trainers', label: t.trainers },
+                            { path: '/schedule', label: t.schedule },
                             { path: '/news', label: t.news },
                             { path: '/pricing', label: t.pricing },
+                            { path: '/about', label: t.about },
                             { path: '/contact', label: t.contact },
                         ].map((item) => (
                             <Link
@@ -136,8 +138,10 @@ const Navbar = () => {
                                 { path: '/', label: t.home },
                                 { path: '/workouts', label: t.workouts },
                                 { path: '/trainers', label: t.trainers },
+                                { path: '/schedule', label: t.schedule },
                                 { path: '/news', label: t.news },
                                 { path: '/pricing', label: t.pricing },
+                                { path: '/about', label: t.about },
                                 { path: '/contact', label: t.contact },
                             ].map((item) => (
                                 <Link
